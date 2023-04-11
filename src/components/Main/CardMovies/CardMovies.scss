@@ -1,0 +1,13 @@
+.card__block{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1240px;
+margin: 2rem auto;
+justify-content: space-evenly;
+padding: 0 10px;
+
+@media screen and (max-width:1050px) {
+    max-width: 978px;
+   
+}
+}

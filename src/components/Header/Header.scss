@@ -1,0 +1,35 @@
+
+header{
+    background-color: #5ba56b;
+}
+
+.header__wrapper {
+  
+max-width: 1240px;
+margin: 0 auto;
+  padding: 1rem 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__title {
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+.header__navBlock {
+  display: flex;
+  list-style: none;
+
+  li {
+    padding-right: 1.5rem;
+    &:last-child {
+      padding-right: 10px;
+    }
+    a {
+      cursor: pointer;
+      font-size: 18px;
+      color: rgba(240, 248, 255, 0.932);
+    }
+  }
+}
