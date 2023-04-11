@@ -16,20 +16,24 @@ function App() {
 
   React.useEffect(() => {
     try {
-      fetch(`http://www.omdbapi.com/?apikey=4aa27dd2&s=${IsSearch}`)
+      fetch(`https://www.omdbapi.com/?apikey=4aa27dd2&s=${IsSearch}`)
         .then((response) => response.json())
         .then((data) => setMovie(data.Search));
       setIsRequest(true);
     } catch (error) {
-      console.log("Error");
+      console.log(error);
     }
   }, []);
 
   let searchMovies = (str, type) => {
-    debugger;
-    fetch(`http://www.omdbapi.com/?apikey=4aa27dd2&s=${str}&type=${type}`)
-      .then((response) => response.json())
-      .then((data) => setMovie(data.Search));
+try {
+  fetch(`https://www.omdbapi.com/?apikey=4aa27dd2&s=${str}&type=${type}`)
+  .then((response) => response.json())
+  .then((data) => setMovie(data.Search));
+} catch (error) {
+  console.log(error)
+}
+ 
   };
 
   return (
